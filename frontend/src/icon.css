@@ -1,0 +1,28 @@
+.facebook-icon, .instagram-icon, .twitter-icon, .github-icon, .linkedin-icon {
+  display: inline-block;
+  width: 4em; /* Adjust the width and height as needed */
+  height: 4em;
+  background-size: cover; /* Adjust to your preference */
+  margin-bottom: 2em;
+
+}
+
+.facebook-icon {
+  background-image: url(assets/images/download.png);
+}
+
+.instagram-icon {
+  background-image: url(assets/images/instagram_icon.jpeg);
+}
+
+.linkedin-icon {
+  background-image: url(assets/images/linkedin_icon.png);
+}
+
+.twitter-icon {
+  background-image: url(assets/images/twitter_icon.png);
+}
+
+.github-icon {
+  background-image: url(assets/images/github_icon.png);
+}

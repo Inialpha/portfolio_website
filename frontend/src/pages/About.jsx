@@ -3,8 +3,8 @@ function About() {
   return (
     <div id="about" className=" mb-60">
     <h1 className=" text-5xl items-center font-bold line-clamp-2 w-full text-center" >About Me</h1>
-    <div className=" container mx-auto grid grid-cols-2 p-6 ">
-      <div  className="flex justify-center items-center w-80">
+    <div className=" container mx-auto grid md:grid-cols-2 p-6 ">
+      <div  className="flex justify-center items-center md:w-80">
         <img src={profileImage}  className=" rounded-full overflow-hidden w-auto h-auto" />
       </div>
 

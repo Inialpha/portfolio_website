@@ -22,7 +22,7 @@ function Home() {
       <h3 className="text-5xl font-bold mb-4">
 	Contact Me
       </h3>
-      <div className="grid grid-cols-2 mt-10 p-4 mb-40">
+      <div className="grid md:grid-cols-2 mt-10 p-4 mb-40">
 	<Contact />
         <ContactForm />
       </div>

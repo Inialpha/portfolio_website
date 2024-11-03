@@ -5,13 +5,13 @@ import mentor_hub_api from '../assets/api.jpeg'
 
 function Project() {
   return (
-    <div id="project" className="text-left mb-60">
+    <div id="project" className="text-left mb-60 p-6">
       <h1 className=" text-5xl items-center font-bold line-clamp-2 w-full text-center pb-20" >Projects</h1>
       <div className="mb-20">
-        <h3 className="rounded-lg text-4xl text-center mb-6">
+        <h3 className="rounded-lg md:text-4xl text-center mb-6">
        	    <b>RevTax</b><br /> Revolutionizing Revenue Collection
         </h3>
-        <div className="grid grid-cols-2">
+        <div className="grid md:grid-cols-2">
           <div className="flex items-center">
            <img src={revtax} className="rounded-lg" />
     	  </div>
@@ -35,10 +35,10 @@ function Project() {
 	  </div>
 
       <div className="mb-20">
-        <h3 className="rounded-lg text-4xl text-center mb-6">
+        <h3 className="rounded-lg md:text-4xl text-center mb-6">
 	<b>Career Gate</b><br /> Your Pathway to Professional Success
         </h3>
-	<div className="grid grid-cols-2">
+	<div className="grid md:grid-cols-2">
 	  <div className="flex items-center">
 	  <img src={career_gate} className="rounded-lg" />
 	  </div>
@@ -70,9 +70,9 @@ function Project() {
 
 
       <div>
-        <h3 className="rounded-lg text-4xl text-center mb-6" ><b>MentorHup API</b></h3>
+        <h3 className="rounded-lg md:text-4xl text-center mb-6" ><b>MentorHup API</b></h3>
 
-	  <div className="grid grid-cols-2">
+	  <div className="grid md:grid-cols-2">
     	    <div className="flex items-center">
     	      <img src={mentor_hub_api} className="w-full rounded-lg" />
    	      </div>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 ;function Contact() {
   return (
     <div id="contact" className="">
-      <ul className=" grid md:grid-cols-3 ">
+      <ul className=" grid grid-cols-3 ">
 
         <li className=" "><Link to="https://www.linkedin.com/in/inimfon-ebong">
 	  <i className="linkedin-icon mx-4 rounded-lg"></i></Link>

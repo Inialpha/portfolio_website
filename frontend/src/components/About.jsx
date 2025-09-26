@@ -8,7 +8,7 @@ function About() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-16 items-center">
           <div className="md:col-span-2 flex justify-center">
             <div className="w-75 h-75 rounded-3xl bg-gradient-to-br from-pink-500 to-red-500 flex items-center justify-center text-8xl transition-transform duration-300 hover:scale-105 hover:rotate-2 shadow-2xl shadow-black/30">
-              👨‍💻
+              ‍
             </div>
           </div>
           <div className="md:col-span-3 text-gray-400 text-xl leading-relaxed space-y-6">

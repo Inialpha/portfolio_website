@@ -12,7 +12,6 @@ import AnimatedBackground from '../components/AnimatedBackground'
 function Home() {
   return (
     <div className="min-h-screen bg-gray-900 text-white overflow-x-hidden">
-        <AnimatedBackground />
         <Navigation />
         <Hero />
         <About />

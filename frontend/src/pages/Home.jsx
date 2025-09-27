@@ -9,14 +9,15 @@ import { Outlet } from 'react-router-dom';
 import Navigation from '../components/Navigation'
 import Contact from '../components/Contact'
 import AnimatedBackground from '../components/AnimatedBackground'
+
 function Home() {
   return (
     <div className="min-h-screen bg-gray-900 text-white overflow-x-hidden">
         <Navigation />
         <Hero />
         <About />
+	<Projects />
         <Skills />
-        <Projects />
         <Contact />
     </div>
   )

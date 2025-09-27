@@ -1,20 +1,30 @@
 function Contact() {
   const contactMethods = [
     {
+      title: 'LinkedIn',
+      info: 'https://www.linkedin.com/in/inimfon-ebong',
+      icon: '💼',
+    },
+    {
+      title: 'GitHub',
+      info: 'https://github.com/Inialpha',
+      icon: '💻',
+    },
+    {
+      title: 'Twitter',
+      info: 'https://twitter.com/Inimfon_Tech',
+      icon: '🐦',
+    },
+    {
+      title: 'Facebook',
+      info: 'https://www.facebook.com/inimfion.ebong',
+      icon: '📘',
+    },
+    {
       icon: '📧',
       title: 'Email',
-      info: 'inimfon.ebong@email.com'
+      info: 'inimfonebong001@gmail.com'
     },
-    {
-      icon: '💼',
-      title: 'LinkedIn', 
-      info: 'linkedin.com/in/inimfonebong'
-    },
-    {
-      icon: '🐙',
-      title: 'GitHub',
-      info: 'github.com/inialpha'
-    }
   ]
 
   return (
@@ -29,6 +39,12 @@ function Contact() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             {contactMethods.map((method, index) => (
+		    <a
+		    key={index}
+		    href={method.info}
+		    target="_blank"
+		    rel="noopener noreferrer"
+		  >
               <div 
                 key={index}
                 className="p-8 bg-gray-800 rounded-2xl transition-transform duration-300 hover:-translate-y-2 border border-gray-700"
@@ -38,7 +54,7 @@ function Contact() {
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-white">{method.title}</h3>
                 <p className="text-gray-400">{method.info}</p>
-              </div>
+              </div></a>
             ))}
           </div>
         </div>

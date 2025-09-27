@@ -232,7 +232,7 @@ function Projects() {
         {/* Tech Stack */}
         <div className="mb-6">
           <h4 className="text-lg font-semibold text-blue-400 mb-3">Tech Stack:</h4>
-          <div className="space-y-2">
+          <div className="space-y-4">
             {Object.entries(project.tech_stack).map(([category, techs]) => (
               <div key={category} className="flex flex-wrap gap-2">
                 {techs.map((tech, idx) => (
@@ -276,22 +276,21 @@ function Projects() {
   )
 
   return (
-    <section id="projects" className="py-25 px-12 animate-on-scroll">
-	        <div className="max-w-7xl mx-auto">
+    <section id="projects" className="py-25 px-4 md:px-12">
+      <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center m-16"
+          transition={{ duration: 1.8 }}
+          className="text-center mb-16"
         >
-	  <h2 className="text-5xl m-16 text-center bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent font-bold">
-            My Projects
-          </h2>
-          <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Here are some of the projects I've worked on, showcasing my skills in full-stack development
-          </p>
+	  <div className="">
+    	    <h2 className="text-5xl mb-6 text-center bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent font-bold">
+              My Projects
+            </h2>
+            <div className="w-20 h-1 bg-blue-500 mx-auto"></div>
+	  </div>
         </motion.div>
 
         <motion.div

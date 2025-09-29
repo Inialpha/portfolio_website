@@ -1,44 +1,46 @@
 import { motion } from 'framer-motion'
-
+import { Code, Layout, Database, Server, Cog } from "lucide-react"
+;
 function Skills() {
-  const skills = {
-    "technical": [
-      {
-	icon: '⚡',
-        title: "Backend Developement",
-	tools: ["Python", "Node.js"],
-	color: "text-green-400",
-      },
-      {
-        icon: '🚀',
-	title: 'Frontend Development',
-	tools: ["JavaScript", "HTML", "CSS", "React.js", "Tailwind CSS"],
-	color: "text-purple-400",
-      },
-      {
-        icon: '🗄️',
-	title: "Database",
-	tools: ["MySQL", "MongoDB", "Redis"],
-	color: "text-yellow-400",
-      },
-      {
-	icon: '🖥️',
-	title: "Server & Infrastructure",
-	tools: ["Nginx"],
-	color: "text-red-400",
-       },
-       {
-	 icon: '⚙️',
-	 title: "DevOps & Automation",
-	 tools: ["Puppet", "Fabrics"],
-	 color: "text-indigo-400",
-       },
-     ],
-     "nonTechnical": ["Good communication", "Team work"]
-   }
+
+const skills = {
+  technical: [
+    {
+      icon: <Code className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 text-white p-1 rounded-lg" />,
+      title: "Backend Development",
+      tools: ["Python", "Node.js"],
+      color: "from-green-500 to-emerald-500",
+    },
+    {
+      icon: <Layout className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-1 rounded-lg" />,
+      title: "Frontend Development",
+      tools: ["JavaScript", "HTML", "CSS", "React.js", "Tailwind CSS"],
+      color: "from-purple-500 to-pink-500",
+    },
+    {
+      icon: <Database className="w-8 h-8 text-white p-1 rounded-lg" />,
+      title: "Database",
+      tools: ["MySQL", "MongoDB", "Redis"],
+      color: "from-blue-500 to-cyan-500",
+    },
+    {
+      icon: <Server className="w-8 h-8 text-white p-1 rounded-lg" />,
+      title: "Server & Infrastructure",
+      tools: ["Nginx"],
+      color: "from-red-500 to-green-500",
+    },
+    {
+      icon: <Cog className="w-8 h-8 text-white p-1 rounded-lg" />,
+      title: "DevOps & Automation",
+      tools: ["Puppet", "Fabrics"],
+      color: "from-indigo-500 to-blue-500",
+    },
+  ],
+  nonTechnical: ["Good communication", "Team work"],
+};
 
   return (
-    <section id="skills" className="py-25 px-12 animate-on-scroll">
+    <section id="skills" className="py-25 px-12 animate-on-scroll bg-slate-800/50">
       <div className="max-w-6xl mx-auto">
 	<motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -48,9 +50,9 @@ function Skills() {
           className="text-center mb-16"
         >
 	  <div className="">
-            <h2 className="text-5xl mb-6 text-center bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent font-bold">
-              My Skills
-            </h2>
+            <h2 className="text-5xl mb-6 text-center bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text text-transparent font-bold">
+	  <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">                 Skills & Expertise                                  </span>
+	    </h2>
             <div className="w-20 h-1 bg-blue-500 mx-auto"></div>
 	  </div>
 	</motion.div>
@@ -60,7 +62,7 @@ function Skills() {
               key={index}
               className="bg-gray-800 p-8 rounded-3xl text-center transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl hover:shadow-cyan-500/10 border border-gray-700 hover:border-cyan-400"
             >
-              <div className="w-16 h-16 mx-auto mb-5 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center text-2xl">
+              <div className={`w-16 h-16 mx-auto mb-5 bg-gradient-to-r ${skill.color} rounded-2xl flex items-center justify-center text-2xl`}>
                 {skill.icon}
               </div>
               <h3 className={`text-xl font-semibold mb-4 ${skill.color}` }>{skill.title}</h3>

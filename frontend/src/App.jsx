@@ -1,7 +1,18 @@
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+
 import { useEffect } from 'react'
 import './App.css'
-
 import Home from './pages/Home'
+import Portfolio from './pages/Test'
+
+const routes = createBrowserRouter(
+  createRoutesFromElements(
+    <Route>
+      <Route path="/" element={<Home />} />
+      <Route path="/test" element={<Portfolio />} />
+    </Route>
+  )
+)
 
 function App() {
   useEffect(() => {
@@ -49,7 +60,7 @@ function App() {
   }, [])
 
   return (
-    <Home />
+      <RouterProvider router={routes} /> 
   )
 }
 

@@ -23,21 +23,21 @@ function Contact() {
     {
       icon: '📧',
       title: 'Email',
-      info: 'inimfonebong001@gmail.com'
+      info: 'mailto:inimfonebong001@gmail.com'
     },
   ]
 
   return (
-    <section id="contact" className="py-25 px-12 animate-on-scroll">
+    <section id="contact" className="py-25 px-1 animate-on-scroll">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-5xl mb-16 text-center bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent font-bold">
           Let's Connect
         </h2>
-        <div className="text-center">
+        <div className="text-center bg-slate-800/50 py-20">
           <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
             I'm always interested in new opportunities and collaborations. Let's build something amazing together!
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+          <div className="space-y-4 p-4">
             {contactMethods.map((method, index) => (
 		    <a
 		    key={index}
@@ -47,14 +47,18 @@ function Contact() {
 		  >
               <div 
                 key={index}
-                className="p-8 bg-gray-800 rounded-2xl transition-transform duration-300 hover:-translate-y-2 border border-gray-700"
+		className="flex items-center gap-4 p-4 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors mb-4"
+
               >
-                <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center text-xl">
+		<div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
                   {method.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-white">{method.title}</h3>
-                <p className="text-gray-400">{method.info}</p>
-              </div></a>
+		<div className="text-left">
+                  <p className="text-slate-400 text-sm">{method.title}</p>
+                  <p className="text-white font-medium">{method.info}</p>
+		</div>
+              </div>
+            </a>
             ))}
           </div>
         </div>

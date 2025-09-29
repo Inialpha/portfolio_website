@@ -19,6 +19,8 @@ function Home() {
 	<Projects />
         <Skills />
         <Contact />
+	<ContactForm />
+	<Footer />
     </div>
   )
 }

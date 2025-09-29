@@ -3,7 +3,7 @@ const hero = "I design and build scalable web applications with a focus on clean
 
 function Hero() {
   return (
-    <section id="home" className="h-screen flex items-center justify-center text-center relative overflow-hidden">
+    <section id="home" className="h-screen md:h-80 flex items-center justify-center text-center relative overflow-hidden">
       <div className="max-w-4xl px-5 animate-fade-in-up">
         <h1 className="text-6xl md:text-8xl font-black mb-5 leading-tight bg-gradient-to-r from-white via-cyan-400 to-indigo-500 bg-clip-text text-transparent">
           Inimfon Ebong

@@ -3,12 +3,13 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import { useEffect } from 'react'
 import './App.css'
 import Home from './pages/Home'
-import Portfolio from './pages/Test'
+import ProjectDetail from './pages/ProjectDetail'
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       <Route path="/" element={<Home />} />
+      <Route path="/projects/:slug" element={<ProjectDetail />} />
     </Route>
   )
 )

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Send } from 'lucide-react';
+import axios from "axios";
 
 const ContactForm = () => {
   const [isVisible, setIsVisible] = useState({});
@@ -19,9 +20,17 @@ const ContactForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async (e) => {
     setFormStatus('sending');
+    e.preventDefault();
+    try {
+      const res = await axios.post("https://emailmanager-hz68.onrender.com/send-email/", formData)
+      console.log(res)
+    } catch (error) {
+      console.log(error)
+    } finally {
+      setFormStatus('');
+    }
   };
 
   return (

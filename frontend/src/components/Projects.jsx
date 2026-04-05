@@ -10,9 +10,126 @@ import revtax_hero from '../assets/revtax/revtax.jpg'
 import revtax_video from '../assets/revtax/rev_tax_video.mp4'
 import edusync_dashboard_video from '../assets/edusync/edusync.mp4'
 import simple_shell_image from '../assets/shell/shell.jpg'
+import MedGraphHero from '../assets/medgraph/med_graph_hero.jpg'
+
+import JobEdgeVideo from '../assets/jobedge/job_edge_video.mp4'
+import JobEdgeHero from '../assets/jobedge/job_edge_hero.png'
+import JobEdgeResumeBuilder from '../assets/jobedge/job_edge_resume_builder.png'
+import JobEdgeJobsPage from '../assets/jobedge/job_edge_jobs_page.png'
+
+
 import { motion } from 'framer-motion'
 
 const projects = [
+	{
+  "title": "JobEdge",
+  "subtitle": "Land your dream job faster — powered by AI.",
+  "description": "JobEdge is a full-stack job application platform that uses AI to streamline the job search and application process. It enables users to build a comprehensive master resume, automatically generate tailored resumes and cover letters for specific job postings, discover relevant job opportunities, and manage applications in one unified system. By combining AI-driven content generation, document processing, and integrated job search, JobEdge reduces repetitive effort and improves efficiency for job seekers.",
+  "key_features": [
+    "AI-powered resume and cover letter generation tailored to job descriptions",
+    "Smart resume builder with support for PDF, DOCX, and TXT uploads",
+    "Master resume system serving as a single source of truth",
+    "Integrated job search using keyword and location filtering",
+    "Export of generated resumes in PDF and DOCX formats",
+    "Secure authentication with email verification and Google OAuth",
+    "Interactive onboarding tours for new users",
+    "Admin dashboard for analytics and user management",
+    "Automated email outreach and re-engagement system"
+  ],
+  "tech_stack": {
+    "frontend": [
+      "React 18",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "Redux Persist",
+      "TanStack React Query",
+      "React Router DOM",
+      "Radix UI",
+      "Framer Motion",
+      "React Hook Form",
+      "@react-pdf/renderer",
+      "jsPDF",
+      "Mammoth",
+      "docx",
+      "Tesseract.js",
+      "Axios",
+      "@react-oauth/google",
+      "Vercel Analytics"
+    ],
+    "backend": [
+      "Django 5",
+      "Django REST Framework",
+      "Groq",
+      "LangChain",
+      "Pydantic",
+      "django-rest-authemail",
+      "django-anymail",
+      "PyMuPDF",
+      "pdfminer",
+      "python-docx",
+      "Gunicorn",
+      "Docker"
+    ],
+    "database": [
+      "MySQL",
+      "mysqlclient"
+    ]
+  },
+  "github_link": "https://github.com/Inialpha/JobEdge",
+  "website": "https://jobedge.initechnologies.tech",
+  "videos": [JobEdgeVideo],
+  "images": [JobEdgeHero, JobEdgeResumeBuilder, JobEdgeJobsPage]
+},
+
+
+	{
+  "title": "MedGraph",
+  "subtitle": "Structured Medical Knowledge, Made Accessible",
+  "description": "MedGraph is an educational web application that makes the ICD-10-CM medical coding system accessible through a clean, searchable interface. It enables students, researchers, and general users to explore thousands of medical conditions organized by chapters, searchable by name or ICD code, and presented with structured clinical details such as symptoms, risk factors, and diagnostics. The platform consists of a React-based frontend and a FastAPI-powered backend, supporting scalable, async operations and multiple database engines.",
+  "key_features": [
+    "Full-text search by condition name or ICD-10 code",
+    "A–Z alphabetical browsing of conditions",
+    "Cursor-based pagination for large datasets",
+    "ICD-10-CM chapter-based organization",
+    "Detailed condition pages with structured JSON fields",
+    "Fully asynchronous backend and ORM for high concurrency",
+    "Configurable CORS via environment variables",
+    "Auto-generated API documentation (Swagger and ReDoc)",
+    "Idempotent upsert support for chapters and conditions",
+    "Responsive mobile-first UI design",
+    "AI transparency disclaimers for educational use"
+  ],
+  "tech_stack": {
+    "frontend": [
+      "React 19",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS v4",
+      "TanStack React Query v5",
+      "React Router DOM v7"
+    ],
+    "backend": [
+      "Python 3.11+",
+      "FastAPI",
+      "SQLAlchemy 2 (async)",
+      "Alembic",
+      "Pydantic v2",
+      "Uvicorn",
+      "python-dotenv"
+    ],
+    "database": [
+      "SQLite",
+      "PostgreSQL",
+      "MySQL"
+    ]
+  },
+  "github_link": "https://github.com/Inialpha/MedGraph",
+  "website": "https://medgraph.initechnologies.tech",
+  "videos": [],
+  "images": [MedGraphHero]
+},
     {
       "title": "RevTax",
       "subtitle": "Revolutionizing Revenue Collection",
@@ -198,7 +315,7 @@ function Projects() {
             <span className="text-6xl"></span>
           </div>
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+        <div className="absolute inset-0"></div>
       </div>
 
       {/* Project Content */}

@@ -1,34 +1,26 @@
 import { useState } from 'react'
-import Nav from '../components/Nav'
 import Hero from '../components/Hero'
-import About from '../pages/About'
-import Project from '../pages/Project'
-import Contact from '../pages/Contact'
-import Skill from '../pages/Skill'
+import About from '../components/About'
+import Projects from '../components/Projects'
+import Skills from '../components/Skills'
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
 import { Outlet } from 'react-router-dom';
+import Navigation from '../components/Navigation'
+import Contact from '../components/Contact'
+import AnimatedBackground from '../components/AnimatedBackground'
 
 function Home() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="text-white">
-      <Nav />
-      <Hero />
-      <About />
-      <Project />
-      <Skill />
-      <h3 className="text-5xl font-bold mb-4">
-	Contact Me
-      </h3>
-      <div className="grid md:grid-cols-2 mt-10 p-4 mb-40">
-	<Contact />
-        <ContactForm />
-      </div>
-      <Footer />
-
-      <Outlet />
+    <div className="min-h-screen bg-gray-900 text-white overflow-x-hidden">
+        <Navigation />
+        <Hero />
+        <About />
+	<Projects />
+        <Skills />
+        <Contact />
+	<ContactForm />
+	<Footer />
     </div>
   )
 }

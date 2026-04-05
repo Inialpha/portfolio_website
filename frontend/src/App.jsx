@@ -4,10 +4,11 @@ import { useEffect } from 'react'
 import './App.css'
 import Home from './pages/Home'
 import ProjectDetail from './pages/ProjectDetail'
+import RootLayout from './components/RootLayout'
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
-    <Route>
+    <Route element={<RootLayout />}>
       <Route path="/" element={<Home />} />
       <Route path="/projects/:slug" element={<ProjectDetail />} />
     </Route>
